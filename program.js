@@ -23,7 +23,7 @@ program
   )
   .option("-w, --wake", "End snooze (Do not disturb)")
   .option(
-    "--set <status>",
+    "-s, --set <status>",
     'Set a custom status with text and emoji combined. Example: --set "working from home :house:"'
   )
   .parse(process.argv);
@@ -64,4 +64,3 @@ if (opts.current) {
     status_expiration: 0, // Default to non-expiring status
   });
 }
-
