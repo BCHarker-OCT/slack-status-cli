@@ -21,7 +21,7 @@ Once you've cloned the repository, navigate to the folder using the command `cd 
 ```shell
 # install dependencies needed to run the program 
 $ npm install 
-# install the pgoram globally 
+# install the program globally 
 $ npm install -g .
 ```
 
