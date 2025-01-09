@@ -19,6 +19,9 @@ Inside your chosen terminal app (I recommend [hyper](https://hyper.is/)), clone 
 Once you've cloned the repository, navigate to the folder using the command `cd slack-status-cli`. Once there, you can install status globally with the following command:
 
 ```shell
+# install dependencies needed to run the program 
+$ npm install 
+# install the pgoram globally 
 $ npm install -g .
 ```
 
@@ -54,15 +57,17 @@ Once you've installed it globally, you're ready to go! Entering `status -h` will
 
 The following commands can be used following the `status` keyword to update your status.
 
-| Command (short, long versions) | Action                                                                                                                                                       | Example            |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------ |
-| `-h`, `--help`                 | Displays Help Menu (Detailing all commands)                                                                                                                  | `status -h`        |
-| `-c`, `--current`              | Loads current status                                                                                                                                         | `status -c`        |
-| `-hd`, `--headsdown`           | A preconfigured "heads down" status. <br> Optionally follow with amount of minutes to set for.<br> Defaults to 30 Minute DND & non-expiring status duration. | `status -hd 45`    |
-| `-x`, `--clear`                | Clear current status                                                                                                                                         | `status -x`        |
-| `-dnd`,`--snooze`              | Snooze / Do not disturb. Enter amount of minutes to snooze or will default to 30min                                                                          | `status -dnd 45`   |
-| `-w` ,`--wake`                 | Wake - End snooze / Do not disturb.                                                                                                                          | `status -w`        |
-| `-m`,`--minutes`               | Minutes to pass to another command.                                                                                                                          | `status -dnd -m 2` |
+| Command (short, long versions) | Action                                                                                                                                                       | Example                     |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- |
+| `-h`, `--help`                 | Displays Help Menu (Detailing all commands)                                                                                                                  | `status -h`                 |
+| `-c`, `--current`              | Loads current status                                                                                                                                         | `status -c`                 |
+| `-hd`, `--headsdown`           | A preconfigured "heads down" status. <br> Optionally follow with amount of minutes to set for.<br> Defaults to 30 Minute DND & non-expiring status duration. | `status -hd 45`             |
+| `-x`, `--clear`                | Clear current status                                                                                                                                         | `status -x`                 |
+| `-dnd`, `--snooze`             | Snooze / Do not disturb. Enter amount of minutes to snooze or will default to 30min                                                                          | `status -dnd 45`            |
+| `-w` , `--wake`                | Wake - End snooze / Do not disturb.                                                                                                                          | `status -w`                 |
+| `-m`, `--minutes`              | Minutes to pass to another command.                                                                                                                          | `status -dnd -m 2`          |
+| `-s`, `--set`                  | Set a custom status with text and emoji combined. Example format: "status text :emoji:".                                                                     | `status -s "Working :house:"` |
+
 
 ### Contribution
 
