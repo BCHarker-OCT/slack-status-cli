@@ -45,6 +45,8 @@ Create a copy of the `.env.sample` file and name it `.env`. Make sure to update 
 SLACK_TOKEN = xoxp-therestofyourtoken12328320940923849238
 ```
 
+Additionally, if you would like to use the program after it is globally installed, consider exporting the token into your `.zshrc` or `.bashrc` configuration file. 
+
 ### Emoji
 
 The `headsdown` command is configured to use an emoji from Slack's [Remote Work Expansion Pack](https://slack.com/blog/collaboration/new-emoji-pack-to-help-with-your-remote-work-balance). Add this on for free to your workspace to achieve the desired result!
