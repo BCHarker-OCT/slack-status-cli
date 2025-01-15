@@ -22,12 +22,24 @@ module.exports = Object.freeze({
     );
   },
   setCurrentStatus: async (status) => {
-    const res = await web.users.profile.set({
-      token,
-      profile: status,
-    });
+    try {
+      const res = await web.users.profile.set({
+        token,
+        profile: status,
+      });
 
-    console.log(res.ok ? "status updated!" : "status update failed :(");
+      if (!res.ok) {
+        if (res.error === "profile_status_set_failed_not_valid_emoji") {
+          console.error("Invalid emoji. Please use a valid emoji format like ':house:'");
+        } else {
+          console.error("Failed to set status:", res.error);
+        }
+      } else {
+        console.log("Status updated!");
+      }
+    } catch (error) {
+      console.error("Error setting status:", error.message);
+    }
   },
   setDND: async (minutes) => {
     const res = await web.dnd.setSnooze({
@@ -41,7 +53,7 @@ module.exports = Object.freeze({
       profile: { status_text: "", status_emoji: "" },
     });
 
-    console.log(res.ok ? "status cleared!" : "");
+    console.log(res.ok ? "Status cleared!" : "");
   },
   clearDND: async () => {
     const res = await web.dnd.endDnd({ token });
